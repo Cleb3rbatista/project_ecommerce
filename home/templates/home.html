@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block 'conteudo'%}
+{%load static%}
+{% block 'liks' %} <link rel="stylesheet" type="text/css" href="{% static 'css\home.css' %}" />{% endblock %}
+<section class="conteudo_principal">
+    <div class="conteudo_principal_escrito">
+      <h1 class="conteudo_principal_escrito_titulo">
+        Faça compras<br />
+        no conforto da sua casa
+      </h1>
+      <h3 class="conteudo_principal_escrito_subtitulo">
+        Cadastre já, fácil e rápido
+      </h3>
+      <button type="button" class="conteudo_principal_escrito_botao"><a href="{% url 'cadastro' %}">Cadastre-se</a></button>
+    </div>
+    {% load static %}
+    <img
+      class="conteudo_principal_img"
+      src="{% static 'img\pokemonshome.png' %}"
+      alt="logo secundario pokemons"
+    />
+  </section>
+  <section class="conteudo_secundario">
+    <h3 class="conteudo_secundario_titulo">Oque você pode fazer aqui?</h3>
+    <p class="conteudo_secundario_subtitulo">
+      <strong>Procura e comprar o que você precisa</strong>, tudo isso dentro de casa 
+    </p>
+  </section>
+{%endblock%}

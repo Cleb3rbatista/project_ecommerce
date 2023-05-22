@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block 'conteudo'%}
+{% load static %}
+{% block 'liks'%} <link rel="stylesheet" type="text/css" href="{% static 'css/pesquisaprodutos.css' %}">{%endblock%}
+
+<!--Pesquisa-->
+<form class="form_pesquisa" action="">
+    <input class="edtpequisaprodutos" placeholder="Pesquisar..." type="text">
+    <button class="btnpesquisa"><img class="img_btnpesquisa" src="{%static 'img/lupa.png'%}" alt="lupa"> Pesquisar</button>
+</form>
+{%endblock%}

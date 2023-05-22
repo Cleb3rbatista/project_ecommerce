@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{%block 'titulo'%}{%endblock%} - E-commerce</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css\base.css' %}" />
+    {%block 'liks'%}{%endblock%}
+</head>
+<body>  
+    <header class="cabecalho">
+        <nav class="cabecalho_nav">
+            <a href="{% url 'home'%}">
+                <img class="img_logo" src="{% static 'img/e-commerce.png'%}" alt="logo">
+            </a>
+            <a class="titulo_cabecalho" href="">PROJECT</a>
+            <div class="div_itens">
+                    <a href="{% url 'login'%}">entrar</a>
+                    <a href="">produtos</a>
+                    <a href="">categorias</a>
+                    <a href="">sobre</a>
+            </div>
+        </nav>
+    </header>
+    <main class="conteudo">
+        {%block 'conteudo'%}
+        {%endblock%}
+    </main>
+    <footer class="rodape">
+        <section class="conteudo_rodape">
+            <h3>titulo</h3>
+            <h6>subtitulo</h6>
+            <section class="img_icons">
+                <a href=""><img class="img_facebook" src="{% static 'img/iconfacebook.png'%}" alt="icone do facebook"></a>
+                <a href=""><img class="img_instagram" src="{% static 'img/iconinsta.png'%}" alt="icone do instagram"></a>
+                <a href=""><img class="img_twitch" src="{% static 'img/icontwitch.png'%}" alt="icone do twitch"></a>
+            </section>
+            <section class="menu_rodape">
+                <ul>
+                    <p><strong>Informação</strong></p>
+                    <li>About</li>
+                    <li>Product</li>
+                    <li>Blog</li>
+                </ul>
+                <ul>
+                    <p><strong>Company</strong></p>
+                    <li>Community</li>
+                    <li>Career</li>
+                    <li>Our Story</li>
+                </ul>
+                <ul>
+                    <p><strong>Contact</strong></p>
+                    <li>Getting Started</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>

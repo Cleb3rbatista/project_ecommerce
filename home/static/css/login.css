@@ -1,0 +1,95 @@
+.conteudo_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 75px;
+  }
+  .titulo_login{
+    color: #202022;
+    font-weight: 900;
+    font-size: 58px;
+}
+.form_login{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    box-shadow: 4px 5px 4px #202022;
+    background-color: #C1DCDC;
+}
+label{
+    font-family: 'Oswald', sans-serif;
+    color: #202022;
+    font-weight: 900;
+    font-size: 24px;
+}
+input{
+    padding-left: 6px;
+    border: none;
+    border-radius: 4px;
+    height: 45px;
+    width: 200px;
+    font-family: 'Oswald', sans-serif;
+    color: #202022;
+    font-weight: 600;
+    font-size: 20px;
+}
+button{
+    height: 50px;
+    width: 180px;
+    border: none;
+    box-shadow:4px 5px 5px #202022;
+    border-radius: 4px;
+    border-top-right-radius: 12px;
+    font-weight: 900;
+    font-size: 16px;
+}
+.btnlogar a {
+    color: #202022;
+}
+.btnlogar{
+    margin-left: 14px;
+    background-color: #80F280;
+}
+.btnlogar:hover a {
+    color: #80F280; 
+}
+.btnlogar:hover  {
+    background-color:#DAFDBA;
+    color: #80F280;
+}
+.btncadastrar a {
+    color: #202022;
+    display: block;
+    height: 100%;
+}
+.btncadastrar{
+    background-color: #EAF207;
+}
+.btncadastrar:hover a {
+    color: #D9A404; 
+}
+.btncadastrar:hover  {
+    background-color:#EAF2B3;
+    color: #EAF207;
+}
+.btnhome a {
+    color: #202022;
+    display: block;
+    height: 100%;
+}
+.btnhome{
+    background-color: #0099D6;
+}
+.btnhome:hover a {
+    color: #0099D6; 
+}
+.btnhome:hover  {
+    background-color:#66CEF3;
+    color: #0099D6;
+}
+.divbtns{
+    padding-bottom: 30px;
+    display: flex;
+    gap: 32px;
+}

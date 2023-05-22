@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Oswald:wght@500&family=Roboto+Condensed:wght@300&family=Roboto+Slab:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+  }
+body {
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+  }
+.cabecalho{
+  background-color: #202022;
+}
+.img_logo {
+  width: 60px;
+  height: auto;
+}
+.img_logo a{
+  display: inline-block;
+}
+.cabecalho_nav{
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 200px;
+}
+.titulo_cabecalho{
+  padding-left:164px ;
+  color: #f2f2f2;
+  font-size: 30px;
+}
+.div_itens{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:16px;
+}
+.div_itens a{
+  color: #f2f2f2;
+}
+.conteudo {
+  border-top: 5px solid #f2f2f2;
+  background-image: linear-gradient(to left bottom, #232526, #2a2c2d, #323435, #393b3d, #414345);
+}
+
+footer{
+background-color:#C1DCDC;
+}
+.menu_rodape{
+  margin-top: -106px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 45px;
+}
+li{
+  color: rgba(30, 30, 30, 0.5)
+}
+.conteudo_rodape{
+  padding: 16px;
+}
+h6{
+  color: rgba(30, 30, 30, 0.5)
+}
+.img_facebook{
+  width: 3%;
+}
+.img_instagram{
+  width: 3%;
+}
+.img_twitch{
+  width: 3%;
+}
+.img_icons{
+  padding-top: 30px;
+}

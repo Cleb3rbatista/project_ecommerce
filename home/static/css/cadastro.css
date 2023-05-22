@@ -1,0 +1,73 @@
+.formulario{
+    margin-top: 12px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2px;
+}
+label{
+    font-size: 16px;
+    color: #f2f2f2;
+}
+input{
+    padding-left: 8px;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    width: 300px;
+    font-family: 'Roboto Slab', ExtraBold 800;
+    color: #202022;
+    font-weight: 600;
+    font-size: 16px;
+}
+.edtcpf{
+    width: 200px;
+}
+.edttelefone{
+    width: 200px;
+}
+.edtsenha{
+    width: 200px;
+    font-size: 32px;
+}
+.edtconfirmasenha{
+    width: 200px;
+    font-size: 32px;
+}
+.edtusuario{
+    width: 200px;
+}
+.edtnascimento{
+    width: 200px;
+}
+.btnenviar{
+    margin: 30px;
+    background-color: #80F280;
+    height: 50px;
+    width: 180px;
+    border: none;
+    box-shadow:4px 5px 5px #202022;
+    border-radius: 4px;
+    border-top-right-radius: 12px;
+    font-family: 'Roboto Slab', ExtraBold 800;
+    font-weight: 900;
+    font-size: 16px;
+}
+.btnenviar:hover{
+    background-color:#DAFDBA;
+    height: 50px;
+    width: 180px;
+    border-radius: 4px;
+    border-top-right-radius: 12px;
+    font-family: 'Roboto Slab', ExtraBold 800;
+    color: #80F280;
+    font-weight: 900;
+    font-size: 16px;
+}

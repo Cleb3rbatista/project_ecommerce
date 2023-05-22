@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{%block 'titulo'%}Cadastro{%endblock %}
+{% load static %}
+{% block 'conteudo' %}
+{% block 'liks' %} <link rel="stylesheet" type="text/css" href="{% static 'css\login.css' %}" />{% endblock %}
+<main class="conteudo_login">
+    <h1 class="titulo_login">Login</h1>
+
+    <form class="form_login">
+        <label class="lblusuario" for="usuario">Usúario</label>
+        <input class="edtusuario" maxlength="20" type="text" id="usuario" name="usuario"><br>
+
+        <label class="lblsenha" for="senha">Senha</label>
+        <input class="edtsenha" maxlength="16" type="password" id="senha" name="senha"><br>
+        <button class="btnlogar" type="submit">Logar</button>
+    </form>
+    <div class="divbtns">
+        <button type="button" class="btncadastrar"><a href="{% url 'cadastro' %}">Se cadastrar <br> agora</a></button>
+        <button type="button" class="btnhome"><a href="{% url 'home' %}">Voltar para<br>HomePage</a></button>
+    </div>
+</main>
+{%endblock%}
