@@ -157,24 +157,24 @@ def cadastro(request):
 
     messages.success(request, "Usuario cadastrado com sucesso !")
 
-    Cadusuarios =usuarios(
-        nome=nome,
-        sobrenome=sobrenome,
-        senha=senha,
-        email=email,
-        usuario = usuario,
-        cpf = cpf,
-        telefone = telefone,
-        data_nascimento=data_nascimento 
-    )
-    Cadusuarios.save()
-    
     user = User.objects.create_user(username=usuario,
                                                       password=senha,
                                                       email = email,
                                                       first_name = nome,
                                                       last_name = sobrenome)
     user.save()
+
+    Cadusuarios =usuarios(
+        nome=nome,
+        sobrenome=sobrenome,
+        email=email,
+        usuario = usuario,
+        cpf = cpf,
+        telefone = telefone,
+        data_nascimento=data_nascimento,
+        id_User = user
+    )
+    Cadusuarios.save()
     
     
     return render(request, 'cadastro.html')

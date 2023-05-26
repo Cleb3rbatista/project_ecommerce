@@ -2,8 +2,8 @@
 {%block 'conteudo'%}
 {% load static %}
 {%block 'liks' %} <link rel="stylesheet" type="text/css" href="{% static 'css\cadastro.css' %}">{%endblock%}
+{% include '_mensagens.html' %}
 <div>
-    {% include '_mensagens.html' %}
     <form class="formulario" action="{% url 'cadastro' %}" method="POST">
         {% csrf_token %}
         <div class="divnome">
