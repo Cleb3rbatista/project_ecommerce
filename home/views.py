@@ -197,5 +197,5 @@ def logout_view(request):
     return redirect('home')
 
 def pesquisaprodutos(request):
-    produtos = range(4)
+    produtos = range(6)
     return render(request, 'pesquisaprodutos.html',{'produtos':produtos})

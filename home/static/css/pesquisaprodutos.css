@@ -33,19 +33,29 @@
     height: auto;
 }
 .menu {
-    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    background-color: #C1DCDC;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 32px 32px 32px 8px;
 }
 
 .menu-categorias {
+    display: flex;
+    gap: 3px;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 .menu-categorias li {
-    display: inline-block;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
     margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .menu-categorias li a {
@@ -58,4 +68,16 @@
 
 .menu-categorias li a:hover {
     background-color: #ccc;
+}
+.secao_principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-produtos{
+    margin-top: 32px;
+    margin-left: 100px;
+    float: left;
+}
+.menu-produtos:nth-child(2n+1) {
+    clear: both;
 }

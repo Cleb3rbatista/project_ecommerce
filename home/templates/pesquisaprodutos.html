@@ -25,16 +25,16 @@
         </ul>
     </div>
     {% for produto in produtos %}
-    {% if forloop.counter <= 4 %}
-        <div>
+    {% if forloop.counter <= 6 %}
+        <div class="menu-produtos">
             <img style="width: 320px; height: auto;" class="card-img-top" src="https://source.unsplash.com/random/900x400" alt="">
             <div class="card-body">
             <h4 class="card-title">Produto</h4>
             <h6 style="margin-bottom: 10px;" class="card-subtitle">R$ 600</h6>
             <a class="btnacessar" href="">Acessar</a>
             </div>
+        </div>
     {% endif %}
     {% endfor %}
-        </div>
 </section>
 {%endblock%}
