@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.validators import validate_email
 import re
+from django.contrib.auth import authenticate, login ,logout
 from django.contrib.auth.models import User
 from .models import usuarios
 
@@ -179,8 +180,22 @@ def cadastro(request):
     
     return render(request, 'cadastro.html')
     
-def login(request):
-    return render(request,'login.html',{})
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['usuario']
+        password = request.POST['senha']
+        user = authenticate(request,username=username, password=password)
+        if  user is not None:
+            login(request,user)
+            return redirect('pesquisaprodutos')
+        else:
+            messages.error(request, 'usuario ou senha invalido')
+    return render(request,'login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')
 
 def pesquisaprodutos(request):
-    return render(request, 'pesquisaprodutos.html',{})
+    produtos = range(4)
+    return render(request, 'pesquisaprodutos.html',{'produtos':produtos})

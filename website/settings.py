@@ -138,3 +138,9 @@ MESSAGE_TAGS = {
     constants.SUCCESS: 'alert-success',
     constants.INFO: 'alert-info',
 }
+
+# URL de redirecionamento após login
+LOGIN_REDIRET_URL ='pesquisaprodutos'
+
+# URL de redirecionamento logout 
+LOGOUT_REDIRET_URL = 'login'

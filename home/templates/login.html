@@ -3,10 +3,18 @@
 {% load static %}
 {% block 'conteudo' %}
 {% block 'liks' %} <link rel="stylesheet" type="text/css" href="{% static 'css\login.css' %}" />{% endblock %}
+{% include '_mensagens.html' %}
 <main class="conteudo_login">
     <h1 class="titulo_login">Login</h1>
 
-    <form class="form_login">
+    <form class="form_login" method="POST" action="{% url 'login'%}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if user.is_authenticated %}
+           <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
         <label class="lblusuario" for="usuario">Usúario</label>
         <input class="edtusuario" maxlength="20" type="text" id="usuario" name="usuario"><br>
 

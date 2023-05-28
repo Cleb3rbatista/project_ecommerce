@@ -3,9 +3,9 @@
 {%block 'liks' %} <link rel="stylesheet" type="text/css" href="{% static 'css\_mensagens.css' %}">{%endblock%}
 <br>
     {% for message in messages %}
-            <div class="alert {{message.tags }}" role="alert">
-                {{message}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <div class="alert {{message.tags }}">
+                <p class="textomsg">{{message}}</p>
+                <button type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

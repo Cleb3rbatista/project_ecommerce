@@ -1,11 +1,40 @@
 {%extends 'base.html'%}
 {%block 'conteudo'%}
 {% load static %}
-{% block 'liks'%} <link rel="stylesheet" type="text/css" href="{% static 'css/pesquisaprodutos.css' %}">{%endblock%}
+{% block liks%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/pesquisaprodutos.css' %}">
+{%endblock%}
 
 <!--Pesquisa-->
 <form class="form_pesquisa" action="">
-    <input class="edtpequisaprodutos" placeholder="Pesquisar..." type="text">
+    <input  class="edtpequisaprodutos" maxlength="50" placeholder="Pesquisar..." type="text">
     <button class="btnpesquisa"><img class="img_btnpesquisa" src="{%static 'img/lupa.png'%}" alt="lupa"> Pesquisar</button>
 </form>
+<section class="secao_principal">
+    <div class="menu">
+        <ul class="menu-categorias">
+            <li><a href="#">Categoria 1</a></li>
+            <li><a href="#">Categoria 2</a></li>
+            <li><a href="#">Categoria 3</a></li>
+            <li><a href="#">Categoria 4</a></li>
+            <li><a href="#">Categoria 5</a></li>
+            <li><a href="#">Categoria 6</a></li>
+            <li><a href="#">Categoria 7</a></li>
+            <li><a href="#">Categoria 8</a></li>
+            <li><a href="#">Categoria 9</a></li>
+        </ul>
+    </div>
+    {% for produto in produtos %}
+    {% if forloop.counter <= 4 %}
+        <div>
+            <img style="width: 320px; height: auto;" class="card-img-top" src="https://source.unsplash.com/random/900x400" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Produto</h4>
+            <h6 style="margin-bottom: 10px;" class="card-subtitle">R$ 600</h6>
+            <a class="btnacessar" href="">Acessar</a>
+            </div>
+    {% endif %}
+    {% endfor %}
+        </div>
+</section>
 {%endblock%}

@@ -1,7 +1,6 @@
 .alert-danger{
     background-color: #FFBFBF;
-    display: flex;
-    flex-direction: row;;
-    gap: 15px;
-    justify-content: center;
+}
+.alert-danger p{
+    background-color: #ffff;
 }
